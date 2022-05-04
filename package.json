@@ -1,0 +1,23 @@
+{
+  "name": "openmind_final_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass-dev":"sass --watch src/scss:assets/css",
+    "sass-prod":"sass --no-source-map --style=compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sciug/openmind_final_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sciug/openmind_final_project/issues"
+  },
+  "homepage": "https://github.com/sciug/openmind_final_project#readme",
+  "dependencies": {
+    "sass": "^1.51.0"
+  }
+}
