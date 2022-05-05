@@ -1,0 +1,117 @@
+:root {
+      
+
+     /* colors */
+
+    --first-bg-color:#F5F5F5;
+    --second-bg-color:#E5E5E5 ;
+    --footer-first-color:#6B6B6B;   
+    --footer-second-color:#9D9D9D;
+    --black:#000000;
+     /* font paragraphs */
+
+    --font_size_xs: 10px ;
+    --font_size_s: 12px ;
+    --font_size_m: 14px ;
+    --font_size_l: 16px ;
+    --font_size_xl: 18px ;
+    --font_size_xxl: 20px;
+    --font_size_xxxl: 22px;
+
+
+    /* headings */
+
+    --font_size_h_s: 32px ;
+    --font_size_h_m: 34px ;
+    --font_size_h_l: 38px ;
+    --font_size_h_xl: 42px ;
+
+
+    /* margins */
+
+    --margin_xxxs: .2rem;
+    --margin_xxs: .5rem;
+    --margin_xs: 1rem;
+    --margin_s: 1.5rem;
+    --margin_m: 2rem;
+    --margin_l: 2.5rem;
+    --margin_xl: 3rem;
+    --margin_xxl: 4rem;
+    --margin_xxxl: 5rem;
+
+
+
+}
+  
+
+$first-bg-color:#F5F5F5;
+$second-bg-color:#E5E5E5 ;
+$footer-first-color:#6B6B6B;   
+$footer-second-color:#9D9D9D;
+$black:#000000;
+
+
+
+
+/* font_size */
+
+$base-font-size:8px;
+@for $i from 1 through 6 {
+    p.fs_#{8 -$i} {
+        font-size: $base-font-size + $i*2px
+    }
+}
+
+/*
+p.fs_7 { font-size:10px }
+p.fs_6 { font-size:12px }
+p.fs_5 { font-size:14px }
+p.fs_4 { font-size:16px }
+p.fs_3 { font-size:18px }
+p.fs_2 { font-size:20px}
+p.fs_1 { font-size:22px}
+
+*/
+
+
+
+
+
+/* paragraphs and text */
+
+$font_size_xs: 10px ;
+$font_size_s: 12px ;
+$font_size_m: 14px ;
+$font_size_l: 16px ;
+$font_size_xl: 18px ;
+$font_size_xxl: 20px;
+$font_size_xxxl: 22px;
+
+
+/* headings */
+
+$font_size_h_s: 32px ;
+$font_size_h_m: 34px ;
+$font_size_h_l: 38px ;
+$font_size_h_xl: 42px ;
+
+
+/* margins */
+
+$margin_xxxs: .2rem;
+$margin_xxs: .5rem;
+$margin_xs: 1rem;
+$margin_s: 1.5rem;
+$margin_m: 2rem;
+$margin_l: 2.5rem;
+$margin_xl: 3rem;
+$margin_xxl: 4rem;
+$margin_xxxl: 5rem;
+
+
+
+
+
+
+
+

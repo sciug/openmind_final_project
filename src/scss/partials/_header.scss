@@ -1,0 +1,76 @@
+header{
+    background-color: white;
+}
+.discount_header_container{
+    color: white;
+    background-color: black;
+    padding: 1rem 2rem;
+    position: relative;
+}
+    
+
+.discount_header_container p{
+    font-size: 12px;
+
+   
+}
+.discount_header_container {
+    button{
+        background:none;
+        border: none;
+        position: absolute;
+        top: 0.5rem;
+        right: 2rem;
+        cursor: pointer;
+        color: white;
+        
+    }
+   
+    
+}
+.header_menu{
+       
+    ul{
+   
+        list-style: none;
+        display: flex;
+       
+        li{
+            margin-right: 1rem;
+            display: flex;
+            align-items: center;
+            a{
+                display: none;
+                text-decoration: none;
+                color: black;
+                padding: .5rem;
+                transition: all 250ms;
+            }
+        }
+
+    
+    }
+    .logo_wrapper{
+        text-align: center;
+        border: 1px dashed black;
+        padding: 1.5rem 0;
+        font-size: 16px;
+    }
+}
+
+
+.header_nav_grid{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1.5rem  minmax(50px, 1fr) minmax(100px, 150px) minmax(50px, 1fr)  1.5rem  ;
+}
+.header_menu{
+    ul{
+        grid-column: 2;
+        align-items: center;
+    }
+    .logo_wrapper{
+        grid-column: 3;
+    }
+}
+

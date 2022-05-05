@@ -1,0 +1,54 @@
+@mixin btn {
+    color: white;
+    background-color: $black;
+    padding:.8em 3em;
+    font-size: $font_size_m;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: $margin_m;
+    transition: all 250ms;
+    &:hover,
+    &:focus{
+        background-color: var(--footer-first-color);
+        
+    }
+    
+}
+
+.btn{
+    @include btn;
+    
+}
+
+
+
+.btn span{
+    vertical-align: middle;
+    margin-bottom: 3px;
+    margin-left: 5px;
+}
+
+
+
+.editorial_info{
+    .btn{
+        align-self: flex-start;
+        
+
+    }
+}
+
+
+
+.btn_2{
+
+    @include btn;
+    
+
+            background-color: var(--footer-second-color);
+            border: none;
+            padding: 0.8rem 2rem;
+            margin-top: 2.5rem;
+            
+        }

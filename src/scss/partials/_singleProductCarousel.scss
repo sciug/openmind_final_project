@@ -1,0 +1,27 @@
+/* CAROUSEL PRODUCT IMAGE */
+
+.single_product{
+    .product{
+        .product_data{
+            .main-carousel{
+                .carousel-cell{
+                    width: 100%;
+                }
+                .flickity-page-dots{
+                    bottom: 0px;
+                     .dot {
+                  height: 4px;
+                  width: 25%;
+                  margin: 0;
+                  border-radius: 0;
+                  
+                }
+                 }
+                .flickity-button {
+                  opacity: .3;
+                } 
+            }
+        }
+    }
+}
+
