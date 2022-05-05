@@ -338,12 +338,20 @@ body {
 }
 
 /*********** UTILITY **********/
+.heart {
+  color: rgb(237, 90, 90);
+}
+
 .width_33 {
   width: 33.33%;
 }
 
 .margin_top {
   margin-top: 4rem;
+}
+
+.grid_long {
+  grid-template-columns: repeat(6, minmax(1em, 1fr)) !important;
 }
 
 .hero_info a {
@@ -433,6 +441,10 @@ body.products_page .products .grids_results {
 }
 body.products_page .products .grids_results div span {
   display: none;
+  cursor: pointer;
+}
+body.products_page .products .grids_results div span:nth-child(2) {
+  opacity: 0.5;
 }
 body.products_page .products .grids_results p {
   color: var(--footer-second-color);
@@ -458,6 +470,7 @@ body.products_page .products_grid .product .product_data span,
 body.products_page .products_grid .product .product_data .new_tag,
 body.products_page .products_grid .product .product_data .quantity {
   position: absolute;
+  cursor: pointer;
 }
 body.products_page .products_grid .product .product_data span {
   top: 0.5rem;
@@ -477,6 +490,7 @@ body.products_page .products_grid .product .product_data .quantity {
   padding: 0.1rem 0.4rem;
   font-weight: 700;
   font-size: 10px;
+  cursor: default;
 }
 body.products_page .products_grid .product .product_info {
   padding: 1.5rem 0.5rem;
