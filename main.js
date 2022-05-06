@@ -57,13 +57,13 @@ const heartButton = document.querySelectorAll('.products .product .product_data 
       function toggleFavorite(event) {
           event.target.classList.toggle('heart')
          
-      }
+      };
 
 
 const gridView = document.getElementById('grid_view');
 const gridOn = document.getElementById('grid_on');
-const gridElement = document.querySelector('.products_grid')
-const productInfo = document.querySelectorAll('.product .product_info')
+const gridElement = document.querySelector('.products_grid');
+const productInfo = document.querySelectorAll('.product .product_info');
 
 gridView.addEventListener('click', showInfo_changeGrid);
 gridOn.addEventListener('click', hideInfo_changeGrid);
@@ -71,9 +71,9 @@ gridOn.addEventListener('click', hideInfo_changeGrid);
 function showInfo_changeGrid(){
     productInfo.forEach((e) =>
     e.style.display= 'inherit');
-    gridOn.style.opacity = '0.5'
-    gridView.style.opacity = '1'
-    gridElement.classList.remove('grid_long')
+    gridOn.style.opacity = '0.5';
+    gridView.style.opacity = '1';
+    gridElement.classList.remove('grid_long');
     document.querySelectorAll('.product_data img').forEach((e)=>
     e.style.height = '380px'
     )

@@ -72,6 +72,7 @@
         list-style: none;
         @include display_flex;
         margin-top: 1.5rem;
+        justify-content: space-between;
         li{
             font-size: 2rem;
         }

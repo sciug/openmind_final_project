@@ -23,3 +23,11 @@
     align-items: center;
     
 }
+
+@mixin display_flex_align_center {
+    @include display_flex();
+    
+    align-items: center;
+    
+}
+

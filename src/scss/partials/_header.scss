@@ -1,6 +1,9 @@
 header{
     background-color: white;
 }
+
+
+
 .discount_header_container{
     color: white;
     background-color: black;
@@ -28,6 +31,8 @@ header{
    
     
 }
+
+
 .header_menu{
        
     ul{
@@ -45,6 +50,21 @@ header{
                 color: black;
                 padding: .5rem;
                 transition: all 250ms;
+                @media screen and (min-width: 376px){  
+                    display: inline-block;
+                font-size: $font_size_xl;
+                font-weight: 700;
+                &:hover,
+                &:focus{
+                    border-bottom: 2px solid $black;
+                }
+                }
+
+            }
+            button{
+                @media screen and (min-width: 376px){  
+                   display: none;
+                }
             }
         }
 

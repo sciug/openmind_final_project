@@ -1,0 +1,190 @@
+/************* PRODUCTS PAGE ***************/
+
+
+body.products_page{
+    header{
+
+        box-shadow: 0px 0px 10px rgba(147, 147, 147, 0.736);
+    }
+
+    .products{
+        h1{
+            background-color: white;
+            padding: 2rem 3rem;
+            @media screen and (min-width: 376px){
+                text-align: center;
+                padding: 4rem 0;
+
+            }
+            
+        }
+        .grids_results{
+            justify-content: flex-start;
+            padding: 1.5rem 3rem;
+            @media screen and (min-width: 376px){
+                display: flex;
+                justify-content: space-between;
+                padding: 2rem 3rem;
+                
+            }
+
+
+            div{
+                button{
+                    display: none;
+                    cursor: pointer;
+                    @media screen and (min-width: 376px){
+                        display: inline-block;
+                        
+                        
+                    }
+                    &:nth-child(2){
+                        opacity: .5;
+                    }
+                }
+            }
+            p{
+                color: var(--footer-second-color);
+                font-weight: bold;
+                @media screen and (min-width: 376px){
+                    font-weight: 700;
+                   font-size: $font_size_l;
+                   letter-spacing: .5px;
+                    
+                    
+                }
+                
+
+            }
+        }
+    }
+    .products_grid{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(1em,1fr));
+        row-gap: 2rem;
+        @media screen and (min-width: 376px){  
+            display: grid;
+            grid-template-columns: repeat(4, minmax(1em,1fr));
+            row-gap: 2rem;  
+        }
+        .product{
+            @media screen and (min-width: 376px){  
+                border-right: .5px solid var(--first-bg-color);
+                &:nth-child(6n){
+                    border: none;
+                }
+            }
+            &:nth-child(odd){
+                border-right: .5px solid var(--first-bg-color);
+            }
+            .product_data{
+                position: relative;
+                img{
+                    width: 100%;
+                    height: 187px;
+                    object-fit: cover;
+                    @media screen and (min-width: 376px){  
+                        height:380px; 
+                    }
+
+                }
+               button,
+                .new_tag,
+                .quantity{
+                    position: absolute;
+                    cursor: pointer;
+                }
+                button{
+                    top:.5rem;
+                    right: .5rem;
+                    @media screen and (min-width: 376px){  
+                        top: 2rem;
+                    }
+                }
+                .new_tag
+                {
+                    top:.5rem;
+                    left:.5rem;
+                    @media screen and (min-width: 376px){  
+                        top: 2rem;
+                    }
+                    
+
+                }
+                .quantity{
+                    bottom:1rem;
+                    left: .5rem;
+                }
+                .new_tag,
+                .quantity{
+                    background-color: white;
+                    padding: .1rem .4rem;
+                    font-weight: 700;
+                    font-size: $font_size_xs;
+                    cursor: default;
+                    @media screen and (min-width: 376px){  
+                        left: 2rem;
+                        background: none;
+                    }
+
+                    
+                    
+                }
+            }
+            .product_info{
+                padding: 1.5rem .5rem;
+                @media screen and (min-width: 376px){  
+                    padding:2.5rem 2rem 0; 
+                }
+                .name_desc{
+                    @media screen and (min-width: 376px){  
+                        margin-bottom: $margin_m;
+                    }
+                    h3{
+                        margin-bottom: $margin_xs;
+                    }
+                    margin-bottom: $margin_xxl;
+                }
+
+                .price{
+                    @include display_flex;
+                    align-items: center;
+                    padding: .5rem;
+                    background-color: white;
+                    justify-content: space-between;
+                    @media screen and (min-width: 376px){  
+                        background-color: var(--first-bg-color);
+                    }
+                    
+
+                    div{
+                        display: flex;
+                        align-items: center;
+                        .discount_price{
+                            font-weight: bold;
+                            font-size: $font_size_m;
+                            margin-right: $margin_xxs;
+                        }
+                        .old_price{
+                            text-decoration: line-through;
+                            font-size:$font_size_xs;
+                        }
+
+                    }
+
+
+                }
+
+            }
+
+        }
+    }
+    .scroll_badges.margin_top{
+        @media screen and (min-width: 376px){  
+            
+                margin-top: 10rem;
+            
+        }
+    }
+}
+
