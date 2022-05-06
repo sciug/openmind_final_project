@@ -23,13 +23,18 @@ body{
     background:#fcfcfc
     
 }
-
+button{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
 
 /*********** UTILITY **********/
 
 
 .heart{
-    color: rgb(237, 90, 90);
+    color: $favorite-color;
+    
 }
 
 .width_33{
@@ -174,7 +179,7 @@ body.products_page{
             justify-content: flex-start;
             padding: 1.5rem 3rem;
             div{
-                span{
+                button{
                     display: none;
                     cursor: pointer;
                     &:nth-child(2){
@@ -205,13 +210,13 @@ body.products_page{
                     object-fit: cover;
 
                 }
-                span,
+               button,
                 .new_tag,
                 .quantity{
                     position: absolute;
                     cursor: pointer;
                 }
-                span{
+                button{
                     top:.5rem;
                     right: .5rem;
                 }
@@ -288,6 +293,9 @@ body.product_page{
             .product_data{
                 position: relative;
                 width: 100%;
+                .grid_desktop_images{
+                    display: none;
+                }
                 img:first-of-type{
                     width: 100%;
                     object-fit: cover;
@@ -605,7 +613,7 @@ body.product_page{
                    letter-spacing: .5px;
                }
               div{
-                span{
+                button{
                     display: inline-block;
                     
                 }
@@ -631,7 +639,7 @@ body.product_page{
                         background: none;
                     }
                     .new_tag,
-                    span{
+                    button{
                         top: 2rem;
                     }
                 }
@@ -716,7 +724,7 @@ body.product_page{
                               width: 50px;
                              vertical-align: middle;
                              border-left: 1px solid white;
-                             span{
+                             button{
                                  margin-left: 0;
                              }
 

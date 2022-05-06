@@ -337,6 +337,12 @@ body {
   background: #fcfcfc;
 }
 
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
 /*********** UTILITY **********/
 .heart {
   color: rgb(237, 90, 90);
@@ -439,11 +445,11 @@ body.products_page .products .grids_results {
   justify-content: flex-start;
   padding: 1.5rem 3rem;
 }
-body.products_page .products .grids_results div span {
+body.products_page .products .grids_results div button {
   display: none;
   cursor: pointer;
 }
-body.products_page .products .grids_results div span:nth-child(2) {
+body.products_page .products .grids_results div button:nth-child(2) {
   opacity: 0.5;
 }
 body.products_page .products .grids_results p {
@@ -466,13 +472,13 @@ body.products_page .products_grid .product .product_data img {
   height: 187px;
   object-fit: cover;
 }
-body.products_page .products_grid .product .product_data span,
+body.products_page .products_grid .product .product_data button,
 body.products_page .products_grid .product .product_data .new_tag,
 body.products_page .products_grid .product .product_data .quantity {
   position: absolute;
   cursor: pointer;
 }
-body.products_page .products_grid .product .product_data span {
+body.products_page .products_grid .product .product_data button {
   top: 0.5rem;
   right: 0.5rem;
 }
@@ -532,6 +538,9 @@ body.product_page .single_product .product {
 body.product_page .single_product .product .product_data {
   position: relative;
   width: 100%;
+}
+body.product_page .single_product .product .product_data .grid_desktop_images {
+  display: none;
 }
 body.product_page .single_product .product .product_data img:first-of-type {
   width: 100%;
@@ -779,7 +788,7 @@ body.product_page .single_product .show_details ul li .text {
     font-size: 16px;
     letter-spacing: 0.5px;
   }
-  body.products_page .products .grids_results div span {
+  body.products_page .products .grids_results div button {
     display: inline-block;
   }
   body.products_page .products_grid {
@@ -802,7 +811,7 @@ body.products_page .products_grid .product .product_data .quantity {
     background: none;
   }
   body.products_page .products_grid .product .product_data .new_tag,
-body.products_page .products_grid .product .product_data span {
+body.products_page .products_grid .product .product_data button {
     top: 2rem;
   }
   body.products_page .products_grid .product .product_info {
@@ -872,7 +881,7 @@ body.products_page .products_grid .product .product_data span {
     vertical-align: middle;
     border-left: 1px solid white;
   }
-  body.product_page .single_product .product .product_info .buttons button:nth-of-type(2) span {
+  body.product_page .single_product .product .product_info .buttons button:nth-of-type(2) button {
     margin-left: 0;
   }
   body.product_page .single_product .product .product_info .buttons button:nth-of-type(1) {
