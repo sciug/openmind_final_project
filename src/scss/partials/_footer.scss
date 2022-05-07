@@ -1,12 +1,12 @@
 .contact_us{
-    @media screen and (min-width: 376px) {
+    @media screen and (min-width: 550px) {
         padding-top: 5rem;
     }
 
     h2{
         font-size: 24px;
         line-height: 28.13px;
-        @media screen and (min-width: 376px) {
+        @media screen and (min-width: 550px) {
             max-width: 455px;
         }
 
@@ -71,7 +71,7 @@
 .social{
     background-color: white;
     padding-bottom: 4rem;
-    @media screen and (min-width: 376px) {
+    @media screen and (min-width: 550px) {
         display: flex;
         justify-content: center;
         align-items: center;       
@@ -86,13 +86,13 @@
         @include display_flex;
         margin-top: 1.5rem;
         justify-content: space-between;
-        @media screen and (min-width: 376px) {
+        @media screen and (min-width: 550px) {
             margin-top: 0;    
     
         }
         li{
             font-size: 2rem;
-            @media screen and (min-width: 376px) {
+            @media screen and (min-width: 550px) {
                 margin-left:$margin_m;
 
         
@@ -107,13 +107,13 @@
     padding-bottom: 3rem;
     color: white;
     text-align: center;
-    @media screen and (min-width: 376px) {
+    @media screen and (min-width: 550px) {
         display: flex;
         justify-content: center;
 
     }
     p{
-        @media screen and (min-width: 376px) {
+        @media screen and (min-width: 550px) {
             margin-right: $margin_m;
     
         }
@@ -129,7 +129,7 @@
         li{
             color: white;
             padding-right: 2rem;
-            @media screen and (min-width: 376px) {
+            @media screen and (min-width: 550px) {
                 &:first-child{
                     list-style:disc;
                 }
@@ -149,7 +149,7 @@
 
 /*mediaquery for footer>more_info section */
 
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 550px) {
     .more_info{
         grid-column: 8/span 4;
         display: flex;

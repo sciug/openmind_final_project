@@ -8,6 +8,7 @@
 @import 'partials/productsPage';
 @import 'partials/productPage';
 @import 'partials/sections';
+@import 'partials/grid';
 
 
 
@@ -98,7 +99,7 @@ h2
 
 
 
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 550px) {
 
 
 
@@ -139,46 +140,10 @@ h2
 
     }
 
-    .grid_50{
-        display: grid;
-        grid-template-columns: 50% 50%;
-       
-        .editorial_sec_bg{
-            height: 800px;
-        }
-        .editorial_info{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 2rem 7rem;
-            
-        }
+   
+   
 
-
-
-       
-    }
-    section:nth-of-type(3){
-        .editorial_info{
-            order: -1;
-        }
-    }
-
-
-    .grid_4col{
-        display: grid;
-        grid-template-columns: repeat(12, minmax(1em, 1fr));
-        .form{
-            grid-column: 2/span 4;
-            padding-top: 0;
-            
-            input{
-                width:317px;
-                margin-right:$margin_xs;
-            }
-        }
-    }
-
+    
 
   
 
