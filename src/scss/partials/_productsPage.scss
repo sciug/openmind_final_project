@@ -11,9 +11,11 @@ body.products_page{
         h1{
             background-color: white;
             padding: 2rem 3rem;
+            padding-top: 14rem;
             @media screen and (min-width: 550px){
                 text-align: center;
                 padding: 4rem 0;
+                padding-top: 14rem;
 
             }
             
@@ -70,9 +72,7 @@ body.products_page{
         .product{
             @media screen and (min-width: 550px){  
                 border-right: .5px solid var(--first-bg-color);
-                &:nth-child(6n){
-                    border: none;
-                }
+                
             }
             &:nth-child(odd){
                 border-right: .5px solid var(--first-bg-color);
@@ -95,6 +95,7 @@ body.products_page{
                     cursor: pointer;
                 }
                 button{
+                    transition: all 250ms;
                     top:.5rem;
                     right: .5rem;
                     @media screen and (min-width: 550px){  

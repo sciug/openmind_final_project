@@ -15,7 +15,7 @@
 }
 
 .hero_info a.button_no_dashed span{
-    font-size: $font_size_s;
+    font-size: $font_size_l;
     margin-left: $margin_xs;
 }
 
@@ -49,45 +49,6 @@
 .contact_us{
     background-color: white;
 }
-
-.hero_info{
-    @media screen and (min-width: 550px) {
-        position: absolute;
-            bottom: 0;
-            left: 2rem;
-            background: rgba(255, 255, 255, 0.54);
-            padding: 3rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            width: 532px;
-            height: 311px;
-            text-align: left;
-    }
-    text-align: center;
-    .text_info{
-        display: none;
-        @media screen and (min-width: 550px) {
-            display: block;
-
-        }
-    }
-    a{
-        @media screen and (min-width: 550px) {
-            justify-content: flex-start;
-
-        }
-
-    }
-    
-    
-}
-
-
 .hero_info,
 .editorial_info,
 .social
@@ -105,3 +66,60 @@ padding:2rem  1.5rem;
     font-weight: 500;
     font-size: $font_size_s;
 }
+
+.hero_info{
+    text-align: center;
+    @media screen and (min-width: 550px) {
+        position: absolute;
+            bottom: 0;
+            left: 2rem;
+            background: rgba(255, 255, 255, 0.54);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            width: 532px;
+            height: 311px;
+            text-align: left;
+            padding: $margin_l $margin_xxl;
+    }
+    
+    .text_info{
+        display: none;
+        @media screen and (min-width: 550px) {
+            display: block;
+            font-size: $font_size_l;
+
+        }
+    }
+    a{
+        transition: all 250ms;
+        position: relative;
+        @media screen and (min-width: 550px) {
+            justify-content: flex-start;
+            &::after{
+                @include border_after;
+                left: 0;
+               
+                
+            }
+            &:hover::after,
+            &:focus::after{
+                @include border_hover_after;
+                width: 45%;
+                
+            }
+            
+        }
+        
+        
+
+    }
+    
+    
+}
+
+

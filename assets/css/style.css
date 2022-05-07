@@ -146,6 +146,7 @@ p.fs_1 { font-size:22px}
   font-size: 14px;
 }
 .social ul {
+  padding: 0 6rem;
   list-style: none;
   display: flex;
   margin-top: 1.5rem;
@@ -163,6 +164,9 @@ p.fs_1 { font-size:22px}
   .social ul li {
     margin-left: 2rem;
   }
+}
+.social ul li a {
+  color: #000000;
 }
 
 .footer_copyright {
@@ -225,6 +229,29 @@ p.fs_1 { font-size:22px}
   }
   .more_info .info div ul li {
     padding: 0.5rem 0;
+  }
+  .more_info .info div ul li a {
+    text-decoration: none;
+    color: #000000;
+    position: relative;
+  }
+  .more_info .info div ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 5px;
+    opacity: 0;
+    transition: all 250ms;
+    background-color: #000000;
+    left: 0;
+    height: 1px;
+  }
+  .more_info .info div ul li a:hover::after, .more_info .info div ul li a:focus::after {
+    opacity: 1;
+    width: 100%;
+    width: 100%;
   }
   .more_info .info div div {
     display: flex;
@@ -297,6 +324,10 @@ p.fs_1 { font-size:22px}
 
 header {
   background-color: white;
+  z-index: 10000001;
+  position: fixed;
+  top: 0px;
+  width: 100%;
 }
 
 .discount_header_container p {
@@ -308,6 +339,7 @@ header {
   background-color: black;
   padding: 1rem 2rem;
   position: relative;
+  z-index: 10000001;
 }
 @media screen and (min-width: 550px) {
   .discount_header_container {
@@ -324,6 +356,9 @@ header {
   color: white;
 }
 
+.header_menu {
+  padding: 1.3rem 0;
+}
 .header_menu ul {
   list-style: none;
   display: flex;
@@ -350,7 +385,7 @@ header {
   .header_menu ul li a::after {
     content: "";
     position: absolute;
-    width: 0px;
+    width: 0;
     height: 2px;
     bottom: -5px;
     left: 5px;
@@ -358,10 +393,13 @@ header {
     transition: all 250ms;
     background-color: #000000;
   }
-  .header_menu ul li a:hover::after, .header_menu ul li a:hover::after {
+  .header_menu ul li a:hover::after, .header_menu ul li a:focus::after {
     opacity: 1;
-    width: 60px;
+    width: 100%;
   }
+}
+.header_menu ul li button a {
+  display: inline-block;
 }
 @media screen and (min-width: 550px) {
   .header_menu ul li button {
@@ -445,11 +483,13 @@ body.products_page header {
 body.products_page .products h1 {
   background-color: white;
   padding: 2rem 3rem;
+  padding-top: 14rem;
 }
 @media screen and (min-width: 550px) {
   body.products_page .products h1 {
     text-align: center;
     padding: 4rem 0;
+    padding-top: 14rem;
   }
 }
 body.products_page .products .grids_results {
@@ -502,9 +542,6 @@ body.products_page .products_grid {
   body.products_page .products_grid .product {
     border-right: 0.5px solid var(--first-bg-color);
   }
-  body.products_page .products_grid .product:nth-child(6n) {
-    border: none;
-  }
 }
 body.products_page .products_grid .product:nth-child(odd) {
   border-right: 0.5px solid var(--first-bg-color);
@@ -529,6 +566,7 @@ body.products_page .products_grid .product .product_data .quantity {
   cursor: pointer;
 }
 body.products_page .products_grid .product .product_data button {
+  transition: all 250ms;
   top: 0.5rem;
   right: 0.5rem;
 }
@@ -624,6 +662,7 @@ body.product_page .single_product .navigation {
 @media screen and (min-width: 550px) {
   body.product_page .single_product .navigation {
     padding: 2rem 5rem;
+    padding-top: 13rem;
     display: flex;
     align-items: center;
   }
@@ -731,18 +770,29 @@ body.product_page .single_product .product .product_info .buttons button {
   margin-top: 1.5rem;
   width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
   border: none;
   background-color: #000000;
   color: white;
-  padding: 0.7rem 0;
+  text-align: left;
+  padding: 0.7rem 1rem;
+  border-right: 1px solid white;
 }
 body.product_page .single_product .product .product_info .buttons button:nth-of-type(2) {
   display: none;
 }
+@media screen and (min-width: 550px) {
+  body.product_page .single_product .product .product_info .buttons button:nth-of-type(2) {
+    display: flex;
+    max-width: 40.8px;
+    justify-content: center;
+  }
+  body.product_page .single_product .product .product_info .buttons button:nth-of-type(2) span {
+    margin: 0;
+  }
+}
 body.product_page .single_product .product .product_info .buttons button span {
-  margin-left: 0.5rem;
+  margin-left: auto;
 }
 body.product_page .single_product .product .product_info .price div {
   display: flex;
@@ -818,7 +868,7 @@ body.product_page .single_product .show_details ul li .text {
 }
 
 .hero_info a.button_no_dashed span {
-  font-size: 12px;
+  font-size: 16px;
   margin-left: 1rem;
 }
 
@@ -854,42 +904,6 @@ body.product_page .single_product .show_details ul li .text {
   background-color: white;
 }
 
-.hero_info {
-  text-align: center;
-}
-@media screen and (min-width: 550px) {
-  .hero_info {
-    position: absolute;
-    bottom: 0;
-    left: 2rem;
-    background: rgba(255, 255, 255, 0.54);
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    width: 532px;
-    height: 311px;
-    text-align: left;
-  }
-}
-.hero_info .text_info {
-  display: none;
-}
-@media screen and (min-width: 550px) {
-  .hero_info .text_info {
-    display: block;
-  }
-}
-@media screen and (min-width: 550px) {
-  .hero_info a {
-    justify-content: flex-start;
-  }
-}
-
 .hero_info,
 .editorial_info,
 .social {
@@ -902,6 +916,64 @@ body.product_page .single_product .show_details ul li .text {
   margin-bottom: 0.5rem;
   font-weight: 500;
   font-size: 12px;
+}
+
+.hero_info {
+  text-align: center;
+}
+@media screen and (min-width: 550px) {
+  .hero_info {
+    position: absolute;
+    bottom: 0;
+    left: 2rem;
+    background: rgba(255, 255, 255, 0.54);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    width: 532px;
+    height: 311px;
+    text-align: left;
+    padding: 2.5rem 4rem;
+  }
+}
+.hero_info .text_info {
+  display: none;
+}
+@media screen and (min-width: 550px) {
+  .hero_info .text_info {
+    display: block;
+    font-size: 16px;
+  }
+}
+.hero_info a {
+  transition: all 250ms;
+  position: relative;
+}
+@media screen and (min-width: 550px) {
+  .hero_info a {
+    justify-content: flex-start;
+  }
+  .hero_info a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 5px;
+    opacity: 0;
+    transition: all 250ms;
+    background-color: #000000;
+    left: 0;
+  }
+  .hero_info a:hover::after, .hero_info a:focus::after {
+    opacity: 1;
+    width: 100%;
+    width: 45%;
+  }
 }
 
 .grid_long {
@@ -999,18 +1071,61 @@ button {
 
 /*********** UTILITY **********/
 .heart {
+  font-variation-settings: "FILL" 1;
   color: rgb(237, 90, 90);
+  animation: beat 1s alternate;
 }
 
+@keyframes beat {
+  0% {
+    transform: scale(0.9);
+  }
+  25% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .width_33 {
   width: 33.33%;
+}
+
+.width_100 {
+  width: 100%;
+}
+
+.margin_left_auto {
+  margin-left: auto;
+}
+
+.ul_appear_onClick {
+  display: inline-block !important;
+  margin-left: 36px;
+  margin-top: 1rem;
+}
+.ul_appear_onClick li {
+  margin: 0.5rem 0;
+}
+.ul_appear_onClick li a {
+  text-decoration: none;
+  color: #000000;
 }
 
 .margin_top {
   margin-top: 4rem;
 }
 
-/*********** HERO SEC **********/
+.drop_shadow {
+  box-shadow: 0px 0px 10px rgba(122, 122, 122, 0.156);
+}
+
 h1,
 h2 {
   font-size: 32px;
@@ -1020,6 +1135,15 @@ h2 {
 .editorial_info p {
   font-size: 16px;
   line-height: 24px;
+}
+
+.js-scroll {
+  opacity: 0;
+  transition: opacity 700ms;
+}
+
+.js-scroll.scrolled {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */

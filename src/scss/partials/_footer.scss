@@ -82,20 +82,26 @@
         font-size: 14px;
     }
     ul{
+        padding: 0 6rem;  
         list-style: none;
         @include display_flex;
         margin-top: 1.5rem;
         justify-content: space-between;
         @media screen and (min-width: 550px) {
-            margin-top: 0;    
+            margin-top: 0; 
+             
     
         }
         li{
             font-size: 2rem;
             @media screen and (min-width: 550px) {
                 margin-left:$margin_m;
+                
 
         
+            }
+            a{
+                color: $black;
             }
         }
     }
@@ -169,6 +175,23 @@
                     margin-left: $margin_xl;
                     li{
                         padding: .5rem 0;
+                        a{
+                            text-decoration: none;
+                            color: $black ;
+                            position: relative;
+                            &::after{
+                                @include border_after;
+                                left: 0;
+                                height: 1px;
+                                
+                            }
+                            &:hover::after,
+                            &:focus::after{
+                                @include border_hover_after;
+                                width: 100%;
+                                
+                            }
+                        }
                     }
                 }
                 div{

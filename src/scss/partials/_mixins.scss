@@ -31,3 +31,23 @@
     
 }
 
+@mixin border_after {
+    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 2px;
+                    bottom: -5px;
+                    left: 5px;
+                    opacity: 0;
+                    transition: all 250ms;
+                    background-color: $black;
+
+    
+}
+
+@mixin border_hover_after {
+    opacity: 1;
+    width: 100%;
+
+    
+}

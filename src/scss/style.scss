@@ -9,23 +9,9 @@
 @import 'partials/productPage';
 @import 'partials/sections';
 @import 'partials/grid';
+@import 'partials/reset';
 
 
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-}
-html{
-    font-size: $font_size_s;
-}
-
-body{
-    background: $first-bg-color;
-    
-}
 button{
     border: none;
     background: none;
@@ -36,12 +22,52 @@ button{
 
 
 .heart{
+    font-variation-settings: 'FILL' 1;   
     color: $favorite-color;
-    
+    animation: beat 1s  alternate;  
+
 }
+
+
+@keyframes beat {
+    0%   {transform: scale(.9);}
+    25%  {transform: scale(1);}
+    50%  {transform: scale(1.1);}
+    75%  {transform: scale(.9);}
+    100% {transform: scale(1);}
+  }
+
 
 .width_33{
     width: 33.33%;
+}
+
+
+.width_100{
+    width: 100%;
+}
+
+
+
+.margin_left_auto{
+    margin-left: auto;
+}
+
+
+
+
+.ul_appear_onClick{
+    display: inline-block !important;
+    margin-left: 36px;
+    margin-top: 1rem;
+    li{
+        margin: .5rem 0;
+        
+        a{
+            text-decoration: none;
+            color: $black;
+        }
+    }
 }
 
 .margin_top{
@@ -51,11 +77,13 @@ button{
 
 
 
+.drop_shadow{
+    box-shadow: 0px 0px 10px rgba(122, 122, 122, 0.156);
+    
+}
 
 
 
-
-/*********** HERO SEC **********/
 
 
 
@@ -80,6 +108,14 @@ h2
 
 
 
+.js-scroll {
+    opacity: 0;
+    transition: opacity 700ms;
+  }
+   
+  .js-scroll.scrolled {
+    opacity: 1;
+  }
 
 
 

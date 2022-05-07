@@ -1,10 +1,14 @@
 body.product_page{
+    
     .single_product{
+       
         width: 100%;
         .navigation{
             display: none;
-            @media screen and (min-width: 550px){  
+            @media screen and (min-width: 550px){ 
+                
                 padding: 2rem 5rem;
+                padding-top: 13rem; 
                 display: flex;
                 align-items: center;}
                 a{
@@ -109,18 +113,34 @@ body.product_page{
                         margin-top: $margin_s;
                         width: 100%;
                         display: flex;
-                        justify-content: center;
+                        
                         align-items: center;
                         border: none;
                         background-color: $black;
                         color: white;
-                        padding: .7rem 0;
+                        text-align: left;
+                        padding: .7rem 1rem;
+                        border-right: 1px solid white;
+                       
                         &:nth-of-type(2){
                             display: none;
+                            @media screen and (min-width: 550px){  
+                                display: flex;
+                                max-width: 40.8px;
+                                justify-content: center;
+                                span{
+                                    margin: 0;
+                                    
+                                    
+                                }
+                                
+                            }
+                            
 
                         }
                         span{
-                            margin-left: $margin_xxs;
+                             margin-left: auto;
+                             
                         }
                     }
                 }
