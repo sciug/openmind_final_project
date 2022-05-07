@@ -6,6 +6,12 @@
 
 .scroll_badges {
     background-color: $first-bg-color;
+    .d_flex{
+        @media screen and (min-width: 376px) {
+            overflow: hidden; 
+        }
+
+    }
     
 
    

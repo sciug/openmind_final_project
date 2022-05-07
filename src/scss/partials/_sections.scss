@@ -1,0 +1,70 @@
+/* HERO_SEC */
+
+
+.hero_info a{   text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $font_size_m;
+    color: $black;
+    cursor: pointer;
+
+
+}
+
+.hero_info a.button_no_dashed span{
+    font-size: $font_size_s;
+    margin-left: $margin_xs;
+}
+
+.hero_sec{
+    width: 100%;
+}
+.hero_sec_bg,
+.editorial_sec_bg
+{
+    height: 377px;
+}
+.hero_sec_bg img,
+.editorial_sec_bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero_info,
+.editorial_info,
+.contact_us{
+    background-color: white;
+}
+
+.hero_info
+ {
+    text-align: center;
+    .text_info{
+        display: none;
+    }
+    
+    
+}
+
+
+.hero_info,
+.editorial_info,
+.social
+{
+padding:2rem  1.5rem;
+
+}
+      
+
+
+.hero_info p.tag,
+.editorial_info p.tag{
+    text-transform: uppercase;
+    margin-bottom: $margin_xxs;
+    font-weight: 500;
+    font-size: $font_size_s;
+}

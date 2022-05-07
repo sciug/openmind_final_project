@@ -7,7 +7,7 @@
 @import 'partials/btn';
 @import 'partials/productsPage';
 @import 'partials/productPage';
-
+@import 'partials/sections';
 
 
 
@@ -54,79 +54,14 @@ button{
 
 
 
-.hero_info a{   text-transform: uppercase;
-    text-decoration: none;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: $font_size_m;
-    color: $black;
-    cursor: pointer;
 
-
-}
-
-
-.hero_info a.button_no_dashed span{
-    font-size: $font_size_s;
-    margin-left: $margin_xs;
-}
 
 
 
 
 /*********** HERO SEC **********/
 
-.hero_sec{
-    width: 100%;
-}
-.hero_sec_bg,
-.editorial_sec_bg
-{
-    height: 377px;
-}
-.hero_sec_bg img,
-.editorial_sec_bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
-.hero_info,
-.editorial_info,
-.contact_us{
-    background-color: white;
-}
-
-.hero_info
- {
-    text-align: center;
-    .text_info{
-        display: none;
-    }
-    
-    
-}
-
-
-.hero_info,
-.editorial_info,
-.social
-{
-padding:2rem  1.5rem;
-
-}
-      
-
-
-.hero_info p.tag,
-.editorial_info p.tag{
-    text-transform: uppercase;
-    margin-bottom: $margin_xxs;
-    font-weight: 500;
-    font-size: $font_size_s;
-}
 
 h1,
 h2
@@ -168,21 +103,8 @@ h2
 
 
 
-    .contact_us{
-        padding-top: 5rem;
-        h2{
-            max-width: 455px;
-        }
-    }
-
-    .header_nav_grid{
-       
-        grid-template-columns: 5rem  minmax(50px, 1fr) minmax(100px, 150px) minmax(50px, 1fr)  5rem  ;
-    }
-    .discount_header_container{
-        text-align: center;
-    }
-
+  
+   
     .hero_sec{
         position: relative;
         .hero_sec_bg{
@@ -257,76 +179,7 @@ h2
         }
     }
 
-    .more_info{
-        grid-column: 8/span 4;
-        display: flex;
-        justify-content: space-between;
-        background-color: white;
-        
-        .info{
-            &:first-of-type{
-                border-bottom: none;
-            }
-            
-            div{
-                flex-direction: column;
-                
-                ul{
-                    display: inline-block;
-                    margin-left: $margin_xl;
-                    li{
-                        padding: .5rem 0;
-                    }
-                }
-                div{
-                    display: flex;
-                    align-items: center;
-                    flex-direction: row;
-                }
-            }
-            button{
-                display: none;
-            }
-           
-        }
-        
-    }
 
-    .social{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        ul{
-            margin-top: 0;
-            li{
-                margin-left:$margin_m;
-            }
-        }
-    }
-    .footer_copyright{
-        display: flex;
-        justify-content: center;
-        p{
-            margin-right: $margin_m;
-        }
-        ul{
-            li{
-                &:first-child{
-                    list-style:disc;
-                }
-            }
-        }
-    }
-
-    .scroll_badges .d_flex{
-        overflow: hidden;
-    }
-
-
-   
-
-
-   
   
 
   }
