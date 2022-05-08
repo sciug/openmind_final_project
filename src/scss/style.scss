@@ -21,11 +21,14 @@ button{
 /*********** UTILITY **********/
 
 
-.heart{
-    font-variation-settings: 'FILL' 1;   
+.heart{  
+    @include heart; 
     color: $favorite-color;
-    animation: beat 1s  alternate;  
-
+    
+}
+.heart_white{
+    @include heart; 
+    color: white;
 }
 
 

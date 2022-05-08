@@ -51,3 +51,8 @@
 
     
 }
+@mixin heart {
+    font-variation-settings: 'FILL' 1;
+    animation: beat 1s  alternate;  
+    
+}
