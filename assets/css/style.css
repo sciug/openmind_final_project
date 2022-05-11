@@ -548,8 +548,34 @@ body.products_page .products_grid .product:nth-child(odd) {
 }
 body.products_page .products_grid .product .product_data {
   position: relative;
+  overflow: hidden;
+  height: 180px;
+}
+@media screen and (min-width: 550px) {
+  body.products_page .products_grid .product .product_data {
+    height: 380px;
+  }
+}
+body.products_page .products_grid .product .product_data a::after {
+  background: none;
+  opacity: 0;
+  transition: all 250ms;
+  width: 100%;
+  height: 100%;
+  content: "";
+  inset: 0;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(56, 56, 56, 0.084));
+  position: absolute;
+}
+body.products_page .products_grid .product .product_data a:hover::after {
+  opacity: 1;
+}
+body.products_page .products_grid .product .product_data a:hover img {
+  transform: scale(1.1);
+  object-position: center;
 }
 body.products_page .products_grid .product .product_data img {
+  transition: all 250ms;
   width: 100%;
   height: 187px;
   object-fit: cover;
@@ -564,11 +590,12 @@ body.products_page .products_grid .product .product_data .new_tag,
 body.products_page .products_grid .product .product_data .quantity {
   position: absolute;
   cursor: pointer;
+  z-index: 10;
 }
 body.products_page .products_grid .product .product_data button {
   transition: all 250ms;
   top: 0.5rem;
-  right: 0.5rem;
+  right: 2rem;
 }
 @media screen and (min-width: 550px) {
   body.products_page .products_grid .product .product_data button {
@@ -1145,7 +1172,7 @@ h2 {
 
 .js-scroll {
   opacity: 0;
-  transition: opacity 700ms;
+  transition: opacity 1s;
 }
 
 .js-scroll.scrolled {
