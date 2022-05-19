@@ -6,192 +6,62 @@
 const productsGrid = document.getElementById('products_grid')
 
 
-const products = [
-    {
-        name: 'prodotto_1',
-        desc: 'desc',
-        discount_price: '120,00',
-        price: '240,00',
-        favorite: false
-    },
-    {
-        name: 'prodotto_2',
-        desc: 'desc',
-        discount_price: '120,00',
-        price: '240,00',
-        favorite: false
-    },
-    {
-        name: 'prodotto_3',
-        desc: 'desc',
-        discount_price: '120,00',
-        price: '240,00',
-        favorite: false
-    },
-    {
-        name: 'prodotto_4',
-        desc: 'desc',
-        discount_price: '120,00',
-        price: '240,00',
-        favorite: false
-    },
-    {
-        name: 'prodotto_5',
-        desc: 'desc',
-        discount_price: '120,00',
-        price: '240,00',
-        favorite: false
-    },
-    {
-        name: 'prodotto_6',
-        desc: 'desc',
-        discount_price: '120,00',
-        price: '240,00',
-        favorite: false
-    },
-    {
-        name: 'prodotto_7',
-        desc: 'desc',
-        discount_price: '120,00',
-        price: '240,00',
-        favorite: false
-    },
-    {
-        name: 'prodotto_8',
-        desc: 'desc',
-        discount_price: '120,00',
-        price: '240,00',
-        favorite: false
-    },
-    {
-        name: 'prodotto_9',
-        desc: 'desc',
-        discount_price: '120,00',
-        price: '240,00',
-        favorite: false
-    },
-    {
-        name: 'prodotto_10',
-        desc: 'desc',
-        discount_price: '120,00',
-        price: '240,00',
-        favorite: false
-    },
-    {
-        name: 'prodotto_11',
-        desc: 'desc',
-        discount_price: '120,00',
-        price: '240,00',
-        favorite: false
-    },
-    {
-        name: 'prodotto_12',
-        desc: 'desc',
-        discount_price: '120,00',
-        price: '240,00',
-        favorite: false
-    },
-    {
-        name: 'prodotto_13',
-        desc: 'desc',
-        discount_price: '120,00',
-        price: '240,00',
-        favorite: false
-    },
-    {
-        name: 'prodotto_14',
-        desc: 'desc',
-        discount_price: '120,00',
-        price: '240,00',
-        favorite: false
-    },
-    {
-        name: 'prodotto_15',
-        desc: 'desc',
-        discount_price: '120,00',
-        price: '240,00',
-        favorite: false
-    },
-    {
-        name: 'prodotto_16',
-        desc: 'desc',
-        discount_price: '120,00',
-        price: '240,00',
-        favorite: false
-    },
-    
-]
 const favoriteProducts=[]
 
-products.forEach((product,index)=>{
-    const productHtml = `<div class="product" id="product_${index}">
-                            <div class="product_data">
-                                <a href="./product.html">
-                                    <img src="https://source.unsplash.com/random/900/?fruit" alt="frutta">
-                                </a>
-                                
-                                <button class="material-symbols-outlined">
-                                favorite
-                                </button>
-                                <div class="new_tag">NEW</div>
-                                <div class="quantity">X6</div>
-                            </div>
-                            <div class="product_info">
-                                <div class="name_desc">
-                                    <h3>${product.name}</h3>
-                                    <p>${product.desc}</p>
-                                </div>
-                                <div class="price">
-                                    <div>
-                                    <p class="discount_price">$${product.discount_price}</p>
-                                    <p class="old_price">$${product.price}</p>
-                                    </div>
-                                    <button class="material-symbols-outlined">
-                                    local_mall
-                                    </button>
-
-                                </div>
-                            </div>
-                        </div>`
 
 
-
-productsGrid.innerHTML += productHtml
-
-
-const cart = document.querySelector('#cart::after')
-console.log(cart)
-let counter = 0
-const heartButton = document.querySelectorAll('.products .product .product_data button');
-      heartButton.forEach((e) =>
+const favoriteButtons = document.querySelectorAll('.products .product .product_data button');
+      favoriteButtons.forEach((e) =>
         e.addEventListener('click', toggleFavorite)
       );
+
+
+
       function toggleFavorite(event) {
+
+
+          const product_id = event.target.dataset.id
+          favoriteProducts.push(product_id)
+          localStorage.setItem("wishlist", JSON.stringify(favoriteProducts))
+
+
           event.target.classList.toggle('heart')
-          product.favorite = !product.favorite
-          console.log(product.favorite)
-          if(event.target.classList.contains('heart')){
-              counter =- 1
+         
+        /*   if(event.target.classList.contains('heart')){
+              counter =+1
+              favoriteProducts.push(event.target.parentElement)
+              console.log(event.target.parentElement)
               
               cart.innerHTML= counter
           }else if(!event.target.classList.contains('heart')){
-              counter =+ 1
+              counter =- 1
+              console.log(event.target.parentElement)
               
-              cart.innerHTML= counter
+              
+             
           };
-          
+           */
           
           
          
       };
 
 
-})
+
+    /*   function inizializzaFavoriteProducts(){
+
+        const wishlistlocalstorage = JSON.parse(localStorage.getItem('wishlist'))
 
 
+        if(wishlistlocalstorage){
+            favoriteProducts.push(...wishlistlocalstorage)
 
+        }
+        
+      
 
-
+      }
+ */
 
 
 
